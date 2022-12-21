@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+        
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+    </head>
+    <style>
+        #nav a{color:red}
+        #nav a:hover{color:black;
+            text-shadow:6px 4px red;
+            padding:1px;
+            font-size:23px;
+            }
+        
+
+            {% comment %} https://www.blueridgenetworks.com/wp-content/uploads/2019/10/Emotet-Threat-Report-Featured-Image-1.jpg {% endcomment %}
+
+    </style>    
+
+    <body style="background:url(https://i.pngimg.me/thumb/f/720/d9b7d676b20e43dab405.jpg);
+                height:1050px;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover;">
+
+        <h1 class="text-danger" style="font-family: 'Bungee Inline', cursive; font-size:95px; text-align:center; margin-top:0%; text-shadow:3px 3px black;">TECHNOVITY <img src="https://i.imgur.com/zCOW6qI.png" width=8%><h1>
+
+
+
+        <nav class="navbar navbar-light navbar-expand-lg" style=" font-size:20px;">
+                <div class="collapse navbar-collapse p-2 " id="navbarText" style=" font-family: 'Kalam', cursive; margin-left:20px ;
+                    margin-top:-16px; border-bottom:5px solid red; border-top:5px solid black; border-radius:20px; text-shadow:1px 1px white;margin-bottom:5px;">
+                  <ul class="navbar-nav mr-auto" id="nav" style="color:blue;">
+                    <li class="nav-item" style="margin-right:0%">
+                      <a class="nav-link active" href="{% url 'mhome' %}"><img src="https://dixonpestcontrol.com/wp-content/uploads/2017/10/house-icon.png" width=26%> HOME</a>
+                    </li>
+                    <li class="nav-item" style="margin-right:-3%">
+                      <a class="nav-link active" href="{% url 'course' %}"><img src="https://freesvg.org/img/3redbooks.png" width=14%> COURSES</a>
+                    </li>
+                    <li class="nav-item" style="margin-right:0%">
+                      <a class="nav-link active" href="{% url 'gallery' %}"><img src="https://eusipco2021.org/wp-content/uploads/2020/03/EUSIPCO-web-icons-promo3-1.png" width=22%> GALLERY</a>
+                    </li>
+                    <li class="nav-item" style="margin-right:25%">
+                        <a class="nav-link active" href="{% url 'contact' %}"><img src="https://th.bing.com/th/id/R.fcb3bd4f47e2be6c63caf40290f6e785?rik=2VhooNLqJ7TX%2bQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fphone%2fphone_PNG49006.png&ehk=Fn8HZC%2bEasiv76foo3P4W42jug70nvAzVBNbsPeMiZk%3d&risl=&pid=ImgRaw&r=0" width=9%> CONTACT</a>
+                      </li>
+                      <li class="nav-item" style="margin-left:10%">
+                        <a class="nav-link active" href="{% url 'signin' %}"><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/131-512.png" width=18%> LOG IN</a>
+                      </li>
+                    </div>
+                  </ul>
+              </nav>
+              {% block content %}{% endblock content %}
+
+
+
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    </body>
+</html>

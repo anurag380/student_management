@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Student{% endblock title %}
+{% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<h1 class="text-center mt-3" style="font-size:45px; font-family: 'Kalam', cursive; text-shadow:2px 2px red;">STUDENTS DETAILS</h1>
+<table class="container table text-center" style="font-family: 'Vollkorn', serif; border:2px solid darkblue;">
+    <tr style="font-size:28px; color:blue;text-shadow:1px 1px red;">
+            <th style="border:2px solid darkblue;">NAME</th>
+            <th style="border:2px solid darkblue;">EMAIL</th>
+            <th style="border:2px solid darkblue;">PHONE NO.</th>
+            <th style="border:2px solid darkblue;">ADDRESS</th>
+            <th style="border:2px solid darkblue;">PLACE</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for i in form %}
+        <tr style="font-size:23px; color:indigo; text-shadow:1px 1px hotpink;">
+            <td style="border:2px solid darkblue;">{{i.student_name}}</td>
+            <td style="border:2px solid darkblue;">{{i.student_email}}</td>
+            <td style="border:2px solid darkblue;">{{i.student_phone}}</td>
+            <td style="border:2px solid darkblue;">{{i.student_address}}</td>
+            <td style="border:2px solid darkblue;">{{i.student_place}}</td>
+            <td style="border:2px solid darkblue;"><a href="{% url 'editprofile' %}?edit={{i.student_id}}" class="btn btn-outline-primary " >EDIT</button></td>
+            <td style="border:2px solid darkblue;"><a href="{% url 'delelte' %}?delete={{i.student_id}}" class="btn btn-outline-danger ">DELETE</button></td>
+        </tr>
+        {% endfor %}
+    
+{% endblock content %}

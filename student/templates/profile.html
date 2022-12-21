@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock title %}
+{% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<h1 class="text-center mt-3" style="font-size:45px; font-family: 'Kalam', cursive; text-shadow:2px 2px red;">MY PROFILE</h1>
+<hr>
+    <table class="container table text-center" style="font-family: 'Vollkorn', serif; border:2px solid darkblue;">
+        <tr style="font-size:28px;color:blue;text-shadow:1px 1px red;">
+            <th style="border:2px solid darkblue;">NAME</th>
+            <th style="border:2px solid darkblue;">EMAIL</th>
+            <th style="border:2px solid darkblue;">PHONE NO.</th>
+        <tr>
+        {% for i in form %} 
+        <tr style="font-size:23px; color:indigo; text-shadow:1px 1px hotpink;">
+            <td style="border:2px solid darkblue;">{{i.name}}</td>
+            <td style="border:2px solid darkblue;">{{i.email}}</td>
+            <td style="border:2px solid darkblue;">{{i.phno}}</td>
+        <tr>    
+        {% endfor %}
+    </table>
+<div class="container p-5 d-flex justify-content-center" style="font-family: 'Vollkorn', serif;">      
+    <a class="btn btn-outline-primary" href={% url 'edit' %} style="font-size:20px;">EDIT MY DATA</a>
+</div>  
+
+    
+{% endblock content %}
+
+

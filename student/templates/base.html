@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+        
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+    </head>
+    <style>
+        #nav a{color:red}
+        #nav a:hover{color:black;
+            text-shadow:6px 4px red;
+            padding:1px;
+            font-size:23px;
+            }
+        
+
+
+
+    </style>    
+
+    <body style="background:url(https://i.pngimg.me/thumb/f/720/d9b7d676b20e43dab405.jpg);
+                height:1050px;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover;">
+
+        <h1 class="text-danger" style="font-family: 'Bungee Inline', cursive; font-size:95px; text-align:center; margin-top:0%; text-shadow:3px 3px black;">TECHNOVITY <img src="https://i.imgur.com/zCOW6qI.png" width=8%><h1>
+
+
+
+        <nav class="navbar navbar-light navbar-expand-lg" style=" font-size:20px;">
+                <div class="collapse navbar-collapse p-2 " id="navbarText" style=" font-family: 'Kalam', cursive; margin-left:20px ;
+                    margin-top:-16px; border-bottom:5px solid red;border-top:5px solid black; border-radius:20px; text-shadow:1px 1px white;margin-bottom:5px;">
+                  <ul class="navbar-nav mr-auto" id="nav" style="color:blue;">
+                    <li class="nav-item" style="margin-right:1%; margin-left:1%">
+                      <a class="nav-link active" href="{% url 'home' %}"><img src="https://dixonpestcontrol.com/wp-content/uploads/2017/10/house-icon.png" width=40%>  HOME</a>
+                    </li>
+                    <li class="nav-item" style="margin-right:1%">
+                      <a class="nav-link active" href="{% url 'staff' %}"><img src="https://cdn0.iconfinder.com/data/icons/business-finance-vol-14-2/512/50-512.png" width=26%> SHOW STAFF</a>
+                    </li>
+                    <li class="nav-item" style="margin-right:-3%">
+                      <a class="nav-link active" href="{% url 'student' %}"><img src="https://www.fujitsu.com/au/imagesgig5/Icon_Students_tcm98-3749853_tcm98-2750236-32.png" width=20%> SHOW STUDENTS</a>
+                    </li>
+                    <li class="nav-item" style="margin-right:23%">
+                        <a class="nav-link active" href="{% url 'enquiry' %}"><img src="https://nordic.totalenergies.com/sites/g/files/wompnd571/f/atoms/image/customer-service_red.png" width=24%> ENQUIRY DETAILS</a>
+                      </li>
+                      <li class="nav-item" style="margin-left:9%">
+                        <a class="nav-link active" href="{% url 'mhome' %}"><img src="https://i.pinimg.com/originals/f5/f7/49/f5f749c3ccd696efd496b4294f76b486.png" width=18%> LOG OUT</a>
+                      </li>
+                      <li class="nav-item" style="font-family: 'Kalam', cursive; font-size:20px; text-shadow:1px 1px white;margin-left:2%">
+                        <a class="nav-link active" href="{% url 'profile' %}"><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/131-512.png" width=18%> MY PROFILE</a>
+                      </li>
+                      <li class="nav-item" style="font-family: 'Kalam', cursive; font-size:20px; text-shadow:1px 1px white;">
+                        <a class="nav-link active " href="{% url 'form' %}"><img src="https://a.thumbs.redditmedia.com/w8WI3sde5g2aojtaLJjq2vVMD3TIqu9KfHRPamhhIc8.png" width=26%> ADD STUDENT</a>
+                      </li>        
+                    </div>
+                  </ul>
+              </nav>
+
+
+              {% block content %}{% endblock content %}
+
+
+
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    </body>
+</html>

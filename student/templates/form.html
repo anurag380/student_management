@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}enquiry{% endblock title %}
+{% block content %}
+<div class="d-flex container">
+    <div class="mt-5">
+        <img src="https://econ.utah.edu/_resources/images/icons/student-form.png" width=60%>
+    </div>
+<div>
+<h1 class="text-center mt-3 mb-3" style="font-size:45px; font-family: 'Acme', sans-serif; color:blue; text-shadow:2px 2px red;">STUDENT FORM</h1>
+<div class="containe text-center" style="border:4px solid darkblue; border-radius:20px;">
+    <form action="" method="POST" style="font-size:18px; text-align:center; color:white; margin-top:5%; padding:40px; color:indigo; font-family: 'Acme', sans-serif; background:url(https://cdn2.vectorstock.com/i/1000x1000/60/51/abstract-blue-and-white-technology-background-vector-26086051.jpg)">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="mt-4 btn btn-outline-primary" value="SUBMIT">
+
+    </form>
+</div>
+</div>
+</div>
+{% endblock content %}
